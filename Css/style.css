@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+.whole		{ border:solid 5px #CCCCCC;border-bottom-color:#CCCCCC; border-top-color:#CCCCCC }
+.head		{ border:solid 1px #CCCCCC;padding:1% 1% 1% 1%; inline-block}
+.headcol1 {width:30%;   vertical-align:top; display: inline-block;}
+.headcol2 {width:68%;   vertical-align:top; display: inline-block; }
+.middle {width:98%; position:relative;border:solid 1px #FF0000; vertical-align:top; padding:1% 1% 1% 1%; }
+.column1 {width:29%;  display: inline-block;border:solid 1px #0000CC;  vertical-align:top; padding:1% 1% 1% 1%; font-size:20px; }
+.column2 {width:66%;  display: inline-block;border:solid 1px #0000CC;  vertical-align:top; padding:1% 1% 1% 1%; font-size:20px; }
+.footer {width:98%; position:relative;border:solid 1px #FF0000; vertical-align:top; padding:1% 1% 1% 1%;}
+
+.s1			{padding:1% 1% 1% 1%;}
+.s3	{ width:100%;padding:1% 1% 1% 1%; }
+.style1 {
+	font-size: 22px;
+	color: #000066;
+	font-weight:bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style2 {
+	color: #0000FF;
+	font-weight: bold;
+}
+
+.style5 {font-size: 24px; color: #0033FF;}
+.style6 {color: #000000}
+.style6 {color: #000000}
+.style7 {color: #0066CC}
+.style8 {color: #00FF00; font-size:24px;}
+.style9	{color:#FCFDCC; font-size:24px;text-decoration:none}
+#back	{ position:fixed; right:1%; bottom:0;}
