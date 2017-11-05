@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Orbital inquiry</title>
+<link href="Css/style.css" rel="stylesheet" type="text/css" />
+<!--<style>
+.whole		{ border:solid 5px #CCFF00;border-bottom-color:#CCCCCC; }
+.head		{ border:solid 1px #CCCCCC;padding:1% 1% 1% 1%; inline-block}
+.headcol1 {width:30%;   vertical-align:top;}
+.headcol2 {width:60%;   vertical-align:top; }
+.middle {width:98%; position:relative;border:solid 1px #FF0000; vertical-align:top; padding:1% 1% 1% 1%; }
+.column1 {width:29%;  display: inline-block;border:solid 1px #0000CC;  vertical-align:top; padding:1% 1% 1% 1%; font-size:20px; }
+.column2 {width:66%;  display: inline-block;border:solid 1px #0000CC;  vertical-align:top; padding:1% 1% 1% 1%; font-size:20px; }
+.footer {width:98%; position:relative;border:solid 1px #FF0000; vertical-align:top; padding:1% 1% 1% 1%;}
+
+.s1			{padding:1% 1% 1% 1%;}
+.style1 {
+	font-size: 22px;
+	color: #000066;
+	font-weight:bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.style2 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.s3	{ width:100%;padding:1% 1% 1% 1%; }
+.style5 {font-size: 24px; color: #0033FF; }
+.style6 {color: #000000}
+</style>-->
+
+<script>
+function submitform()
+{
+	
+	var a = document.forms['inquiryform']['txtname'].value;
+	var c = document.forms['inquiryform']['txtcompany'].value;
+	var d = document.forms['inquiryform']['txtsubject'].value;
+	var e = document.forms['inquiryform']['txtmsg'].value;
+	var f = document.forms['inquiryform']['txtemail'].value;
+	var str = /^[A-Za-z ]+$/;
+	var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var b = document.forms['inquiryform']['txtmobile'].value;
+	var phone = /^\d{10}$/;
+	
+	if(document.getElementById('chkagree').checked == false)
+	{
+		alert("Agree to Terms and Conditions");
+		return false;
+	}
+	else
+	{
+		if( a == "" )
+		{	
+			alert("Please enter name");
+			return false;
+		}
+		if(!a.match(str))
+		{
+			alert("Name must contain only letters");
+			return false;
+		}
+		if( c == "" )
+		{	
+			alert("Please enter company name");
+			return false;
+		}
+		if(!c.match(str))
+		{
+			alert("Company name must contain only letters");
+			return false;
+		}
+		if(b.length != 10)
+		{
+			alert("Mobile number should be of 10 digits");
+					return false;
+		}
+		else
+		{
+			if(!b.match(phone))
+			{
+				alert("Mobile number should consist only of digits");
+				return false;
+			}
+		}
+		if( f == "" )
+		{	
+			alert("Please enter Email address");
+			return false;
+		}
+		if(!f.match(email))
+		{
+			alert("Email address must of valid format");
+			return false;
+		}
+		if( d == "" )
+		{	
+			alert("Please enter Subject");
+			return false;
+		}
+		if(!d.match(str))
+		{
+			alert("Subject must contain only letters");
+			return false;
+		}
+		if( e == "" )
+		{	
+			alert("Please enter Message");
+			return false;
+		}
+		document.getElementById('msgsent').style.display = 'table-row';
+		return false;
+	}
+		
+}
+</script>
+<style>
+#msgsent	{ display:none;	}
+</style>
+</head>
+
+<body class="s1">
+
+	<div class="whole">
+    	<div class="head">
+        	<div class="headcol1" id="whole"><img src="images/orbital-career-logo1.png" width="220" /></div>
+        	<div class="headcol2" align="right">
+            	<img src="images/naukri_icon.png" align="right" height="40" width="40" />  
+            	<a href="https://www.instagram.com/?hl=en"><img src="images/insta.jpg" width="40" height="40" /></a>
+             	<a href="https://twitter.com/Twitter"><img src="images/twitter.jpg" width="40" height="40" /></a>
+             	<a href="https://www.facebook.com/"><img src="images/Facebook_icon.jpg" align="right" height="40" width="40" /></a>            
+            	<br />Call us on: 99xxxxxxxx
+                <br />Email us :abc@xyz.com
+            </div>       	
+      	</div><!--end of head-->
+        
+        <div class="middle">
+        	<div class="s3">
+            	<table bgcolor="#49A3EB" width="98%">
+               	  <tr>
+                	<td> <div align="center"><span class="style5"> <span class="style6">&raquo;</span> <a href="orbital_home.html" class="style9">HOME</a></span></div></td>	
+                	<td><div align="center"><span class="style5"> <span class="style6">&raquo;</span><a href="orbital_about.html" class="style9"> ABOUT US</a></span></div></td>	
+                	<td><div align="center"><span class="style5"> <span class="style6">&raquo;</span> <a href="orbital_services.html" class="style9">SERVICES</a></span></div></td>
+                    <td><div align="center"><span class="style5"> <span class="style6">&raquo;</span> <a href="orbital_contact.html" class="style9">CONTACT US</a></span></div></td>
+                    <td><div align="center" class="style8">&raquo; <!--<a href="orbital_inquiry.html">--><u>INQUIRY</u><!--</a>--></div></td>
+               	  </tr>
+                </table>
+          </div><!--end of header-->
+       	 
+<form method="post"	 name="inquiryform" id="inquiryform" onsubmit="return submitform()">
+          <table width="100%" border="1">
+              <tr>
+                <td colspan="2"><div align="center"><font size="+3" color="#006633">INQUIRY FORM</font></div></td>
+              </tr>
+  			<div  >
+              <tr id="msgsent">
+                <td colspan="2"><div align="center">Email has been successfully sent!</div></td>
+              </tr>
+              </div>
+              <tr>
+                <td width="35%" align="right">Name :</td>
+                <td width="65%" align="left"><label>
+                  <input type="text" name="txtname" id="txtname" />
+                </label></td>
+              </tr>
+              <tr>
+                <td width="35%" align="right">Company :</td>
+                <td width="65%" align="left"><label>
+                  <input type="text" name="txtcompany" id="txtcompany" />
+                </label></td>
+              </tr>
+              <tr>
+                <td width="35%" align="right">Mobile No. :</td>
+                <td width="65%" align="left"><input type="text" name="txtmobile" id="txtmobile" /></td>
+              </tr>
+              <tr>
+                <td width="35%" align="right">Email :</td>
+                <td width="65%" align="left"><input type="text" name="txtemail" id="txtemail" /></td>
+              </tr>
+              <tr>
+                <td width="35%" align="right">Subject :</td>
+                <td width="65%" align="left"><input type="text" name="txtsubject" id="txtsubject" /></td>
+              </tr>
+              <tr>
+                <td width="35%" align="right" valign="top">Message :</td>
+                <td width="65%" align="left"><textarea name="txtmsg" rows="10" id="txtmsg"></textarea></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><div align="center">
+                  <label>
+                  <input type="checkbox" name="chkagree" id="chkagree" />
+                  </label>
+                Please agree to the <u><font color="#0000FF">Terms and Conditions</font></u></div></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="right"><div align="center">
+                  <label>
+                  <input type="submit" name="btnsubmit" id="btnsubmit" value="Submit" />
+                  </label>
+                </div></td>
+              </tr>
+			</table>
+</form>
+<!--end of middle-->
+        
+       <!-- <div align="right" id="back"><a href="#whole"><img src="images/top-1.png" style="background:none;" width="110" /></a></div>-->
+        
+        <div class="footer">
+    		<div align="center">Design By : <span class="style2">TN Solutions</span> | All copyrights reserved &copy;
+          </div>
+   	  </div><!--end of footer-->
+    </div><!--end of whole-->
+</body>
+</html>
