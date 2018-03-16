@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >	<!--Bootstrap linked from website-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	<!--jQuery library--> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	<!--Latest compiled and minified JavaScript-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Fruits</title>
+    <style type="text/css">
+    	button { 	background-color: #4CAF50;
+					border: none;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					text-decoration: none;
+					border-radius: 8px;
+					display: inline-block;
+					font-size: 16px;
+					margin: 4px 2px;
+					cursor: pointer;}
+		.s2 { border: 1px solid;}
+    </style>
+    
+    <script type="text/javascript">
+		function func()
+		{	var x = document.getElementById("fruits").value;
+			document.getElementById("happen").innerHTML = "You selected: " + x;
+		}
+	</script>
+</head>
+
+<body style="background-color:#666666">
+	<div class="container-fluid" style="background-color:#666666">
+        <div class="row" style="display:flex;">
+            <div class="col-xs-3" style="background-color:#F88D69;font-size:24px;">
+            	<center><button onclick="document.getElementById('happen').innerHTML = ''" style="margin-top:100%;color:#FFFFFF">Clear</button></center>
+            </div>
+            <div class="col-xs-9 s1" style="background-color:#000033;">
+                <div class="s1" style="padding:4.75%;text-align:center;font-size:32px;background-color:#00CC33">
+                	Select the Desired Fruit
+                	<select id="fruits" onchange="func()">
+                	  <option>--Select--</option>
+                	  <option value="Apple">Apple</option>
+                	  <option value="Apricot">Apricot</option>
+                	  <option value="Banana">Banana</option>
+                	  <option value="Blueberry">Blueberry</option>
+                	  <option value="Cherries">Cherries</option>
+                	  <option value="Cran berry">Cran berry</option>
+                	  <option value="Dragon fruit">Dragon fruit</option>
+                	  <option value="Gauva">Gauva</option>
+                	  <option value="Grapes">Grapes</option>
+                	  <option value="Kiwi">Kiwi</option>
+                	  <option value="Mango">Mango</option>
+                	  <option value="Oranges">Oranges</option>
+                	  <option value="Pineapple">Pineapple</option>
+                	  <option value="Strawberry">Strawberry</option>
+                	  <option value="Watermelon">Watermelon</option>                  	
+                    </select>
+                </div>
+                <div class="s1" style="padding:16%;text-align:center;font-size:42px;background-color:#DDFB66">
+                	<p id="happen"> You haven't selected anything yet!</p>
+                </div>
+                <div class="s1" style="padding:4%;text-align:right;font-size:22px;background-color:#6600FF">
+                	Name : Darsh Naik
+                    <br />Reg No: RA1611003011137
+                </div>
+            </div>  
+        </div>
+	</div>
+</body>
+</html>
